@@ -44,6 +44,9 @@ gem 'haml-rails'
 # Use Foundation for the frontend
 gem 'foundation-rails', '5.4.3.0'
 
+# Use FA for icons
+gem 'font-awesome-rails'
+
 group :development do
   # Pry to debug
   gem 'pry'
