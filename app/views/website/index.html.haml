@@ -1,23 +1,41 @@
-#intro.row
-  #intro__greeting.row
-    .medium-12.columns
-      %h1 #{@greeting.capitalize}!
-      %h2 I'm Pierre-Yves Poujade,
-      %h3 a Ruby on Rails developer
-      %h3 living in Montréal.
+#intro
+  #intro__greeting
+    .row
+      .medium-12.columns
+        %h1 #{@greeting.capitalize}!
+        %h2 I'm Pierre-Yves Poujade,
+        %h3 a Ruby on Rails developer
+        %h3 living in Montréal.
 
-  #intro__links.row
-    .medium-12.columns
-      %a See my Github
-      %a Call me
-      %a Write me
-      %a Linked in
+  #intro__links
+    .row
+      .medium-12.columns
+        %a See my Github
+        %a Call me
+        %a Write me
+        %a Linked in
 
-#contact.row
-  #callme.row
-    .medium-12.columns
-      %h2 Call me
+#contact
+  #callme
+    .row
+      .medium-12.columns
+        %h2 Call me
+    .row
+      .medium-6.columns
+        %form#callme__form
+          .row
+            .medium-12.columns
+              %label{for: 'phoneNum'}
+                Your phone number
+          .row
+            .medium-12.columns
+              %input#phoneNum{type: 'tel'}
+          .row
+            .medium-12.columns
+              %a.button.expand.radius
+                Call now
 
-  #writeme.row
-    .medium-12.columns
-      %h2 Write me
+  #writeme
+    .row
+      .medium-12.columns
+        %h2 Write me
