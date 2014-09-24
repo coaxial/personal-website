@@ -25,11 +25,10 @@
         %form#callme__form
           .row
             .medium-12.columns
-              %label{for: 'phoneNum'}
+              %label
                 Your phone number
-          .row
-            .medium-12.columns
-              %input#phoneNum{type: 'tel'}
+                %input#callme__phoneNum{type: 'tel', placeholder: '(514) 555-1234'}
+
           .row
             .medium-12.columns
               %a.button.expand.radius
@@ -39,3 +38,28 @@
     .row
       .medium-12.columns
         %h2 Write me
+    .row
+      .medium-6.columns
+        %form#writeme__form
+          .row
+            .medium-12.columns
+              %label
+                Your name
+                %input#writeme__senderName{type: 'text'}
+
+          .row
+            .medium-12.columns
+              %label
+                Your email
+                %input#writeme__senderAddr{type: 'email'}
+
+          .row
+            .medium-12.columns
+              %label
+                Your message
+              %textarea#writeme__senderMessage{type: 'text'}
+
+          .row
+            .medium-12.columns
+              %a.button.expand.radius
+                Send
