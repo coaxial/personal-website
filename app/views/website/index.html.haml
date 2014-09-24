@@ -31,7 +31,7 @@
 
           .row
             .medium-12.columns
-              %a.button.expand.radius
+              %a.button.expand.radius{data: { disable_with: "#{loading_animation} Dialling..." }}
                 Call now
 
   #writeme
@@ -61,5 +61,5 @@
 
           .row
             .medium-12.columns
-              %a.button.expand.radius
+              %a.button.expand.radius{data: { disable_with: "#{loading_animation} Sending..." }}
                 Send
