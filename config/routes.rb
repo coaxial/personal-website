@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'website/index'
+  post '/writeme' => 'website#writeme'
   root 'website#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
