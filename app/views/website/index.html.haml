@@ -22,12 +22,12 @@
         %h2 Call me
     .row
       .medium-6.columns
-        %form#callme__form
+        %form#callme__form{method: 'post', action: '#'}
           .row
             .medium-12.columns
               %label
                 Your phone number
-                %input#callme__phoneNum{type: 'tel', placeholder: '(514) 555-1234'}
+                %input#callme__phoneNum{type: 'tel', placeholder: '(514) 555-1234', required: true, pattern: "[[0-9()-][\s]"}
 
           .row
             .medium-12.columns
@@ -39,27 +39,33 @@
       .medium-12.columns
         %h2 Write me
     .row
+      .medium-12.columns
+        =render '/shared/show_flashes'
+    .row
       .medium-6.columns
-        %form#writeme__form
+        %form#writeme__form{method: 'post', action: writeme_path, accept: {charset: 'UTF-8'}}
           .row
             .medium-12.columns
               %label
                 Your name
-                %input#writeme__senderName{type: 'text'}
+                %input#writeme__senderName{type: 'text', name: 'writeme[sender_name]'}
 
           .row
             .medium-12.columns
               %label
                 Your email
-                %input#writeme__senderAddr{type: 'email'}
+                %input#writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]'}
 
           .row
             .medium-12.columns
               %label
                 Your message
-              %textarea#writeme__senderMessage{type: 'text'}
+              %textarea#writeme__senderMessage{type: 'text', name: 'writeme[sender_message]'}
+
+          =hidden_field_tag :utf8, '✓'
+          =hidden_field_tag :authenticity_token, form_authenticity_token
 
           .row
             .medium-12.columns
-              %a.button.expand.radius{data: { disable_with: "#{loading_animation} Sending..." }}
+              %button.button.expand.radius{type: 'submit', data: { disable_with: "#{loading_animation} Sending..." }}
                 Send

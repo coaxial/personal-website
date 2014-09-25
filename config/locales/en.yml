@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+  activemodel:
+    attributes:
+      contact_form:
+        sender_name:    "Your name"
+        sender_addr:    "Your email address"
+        sender_message: "Your message"
