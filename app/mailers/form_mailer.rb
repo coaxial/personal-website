@@ -6,6 +6,6 @@ class FormMailer < ActionMailer::Base
     @from_name  = contents.sender_name
     @message    = contents.sender_message
 
-    mail subject: 'A message from a visitor'
+    mail to: 'py@poujade.org', subject: 'A message from a visitor'
   end
 end
