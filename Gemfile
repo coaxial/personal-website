@@ -55,6 +55,7 @@ end
 group :test, :development do
   # Test with rspec
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 # Email delivery
