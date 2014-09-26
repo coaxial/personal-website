@@ -56,3 +56,6 @@ group :test, :development do
   # Test with rspec
   gem 'rspec-rails'
 end
+
+# Email delivery
+gem 'postmark-rails'
