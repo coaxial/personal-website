@@ -1,8 +1,36 @@
 require "rails_helper"
 
 RSpec.describe FormMailer, :type => :mailer do
-  it "sends an email to me" do
-    let(:senderAddr) { "visitor@example.com" }
-    
+  let(:contents) {
+    {
+      sender_addr:    'visitor@example.com',
+      sender_name:    'John Doe',
+      sender_message: 'Howdy partner!'
+    }
+  }
+  let(:contact_form) { ContactForm.new contents }
+  let(:mail) { FormMailer.send_visitor_message(contact_form).deliver }
+
+  it "addresses the email to me" do
+    expect(mail.to).to eq(['py@poujade.org'])
   end
+
+  it "includes the visitor's email" do
+    expect(mail.body).to have_content(contact_form.sender_addr)
+  end
+
+  it "includes the visitor's name" do
+    expect(mail.body).to have_content(contact_form.sender_name)
+  end
+
+  it "includes the visitor's message" do
+    expect(mail.body).to have_content(contact_form.sender_message)
+  end
+
+  it "queues the message for sending" do
+    FormMailer.send_visitor_message(contact_form).deliver
+
+    expect(ActionMailer::Base.deliveries).to_not be_empty
+  end
+
 end
