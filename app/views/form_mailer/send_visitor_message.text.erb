@@ -1,6 +1,6 @@
 Hi, <%= @from_name.titleize %> sent you a message.
 
 =================================================
-From: <%= @from_name.titleize %> <<%= @from_email %>>
+From: <%= "#{@from_name.titleize} &lt;#{@from_email}&gt;" %>
 Message:
-<%= @message.titleize %>
+<%= @message %>
