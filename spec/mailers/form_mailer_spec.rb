@@ -28,6 +28,10 @@ RSpec.describe FormMailer, :type => :mailer do
     expect(mail.body).to have_content(contact_form.sender_message)
   end
 
+  it "uses the visitor's email as the reply-to address" do
+    expect(mail.reply_to).to eq ([contact_form.sender_addr])
+  end
+
   it "queues the message for sending" do
     FormMailer.send_visitor_message(contact_form).deliver
 
