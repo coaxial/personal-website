@@ -16,7 +16,8 @@ RSpec.describe FormMailer, :type => :mailer do
   end
 
   it "includes the visitor's email" do
-    expect(mail.body).to have_content(contact_form.sender_addr)
+    # Can't use have_content because it turns <foo> into an HTML tag
+    expect(mail.body).to match(/#{contact_form.sender_addr}/)
   end
 
   it "includes the visitor's name" do
