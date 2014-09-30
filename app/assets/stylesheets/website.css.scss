@@ -1,3 +1,27 @@
 // Place all the styles related to the website controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.greeting__rotator {
+  height: 24px;
+  overflow: hidden;
+  div:nth-child(1) {
+    line-height: 24px;
+    margin: {
+      top:    0;
+      bottom: 0;
+    }
+    animation: rotator 16s ease infinite;
+  }
+}
+
+@keyframes rotator {
+  0%    { margin-top:  0;     }
+  12.5% { margin-top: -24px;  }
+  25%   { margin-top: -48px;  }
+  37.5% { margin-top: -72px;  }
+  50%   { margin-top: -96px;  }
+  62.5% { margin-top: -120px; }
+  75%   { margin-top: -144px; }
+  87.5% { margin-top: -168px; }
+}
