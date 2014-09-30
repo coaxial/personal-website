@@ -60,3 +60,6 @@ end
 
 # Email delivery
 gem 'postmark-rails'
+
+# Add vendor prefixes to CSS
+gem 'autoprefixer-rails'
