@@ -2,26 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Importing Foundation's variables
+@import "foundation/components/type";
+
+// Subtracting 1px to make up for rounding errors and have 37px height
+$rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
+
 .greeting__rotator {
-  height: 24px;
+  // Emulating a H3's footprint
+  margin: {
+    top:    $header-top-margin;
+    bottom: $header-bottom-margin;
+  }
+  height:   $rotator-box-height;
   overflow: hidden;
-  div:nth-child(1) {
-    line-height: 24px;
-    margin: {
-      top:    0;
-      bottom: 0;
-    }
-    animation: rotator 16s ease infinite;
+}
+
+.rotator__statement {
+  // Emulating a H3
+  height:      $rotator-box-height;
+  line-height: $header-line-height;
+  font-size:   $h3-font-size;
+  &:first-child {
+    animation: rotator 19s ease infinite;
   }
 }
 
 @keyframes rotator {
-  0%    { margin-top:  0;     }
-  12.5% { margin-top: -24px;  }
-  25%   { margin-top: -48px;  }
-  37.5% { margin-top: -72px;  }
-  50%   { margin-top: -96px;  }
-  62.5% { margin-top: -120px; }
-  75%   { margin-top: -144px; }
-  87.5% { margin-top: -168px; }
+  0%,    9%    { margin-top: ( 0 * $rotator-box-height); }
+  12.5%, 21.5% { margin-top: (-1 * $rotator-box-height); }
+  25%,   34%   { margin-top: (-2 * $rotator-box-height); }
+  37.5%, 46.5% { margin-top: (-3 * $rotator-box-height); }
+  50%,   59%   { margin-top: (-4 * $rotator-box-height); }
+  62.5%, 71.5% { margin-top: (-5 * $rotator-box-height); }
+  75%,   84%   { margin-top: (-6 * $rotator-box-height); }
+  87.5%, 96.5% { margin-top: (-7 * $rotator-box-height); }
 }
