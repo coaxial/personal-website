@@ -1,49 +1,47 @@
 .row
-  .medium-offset-2.medium-8.columns
+  .medium-7.large-centered.columns
     #intro
       #intro__greeting
         .row
-          .medium-12.columns
-            %h1 #{@greeting.capitalize}!
-            %h2 I'm Pierre-Yves Poujade,
-            %h3 a Ruby on Rails developer
-            .greeting__rotator
-              .rotator__statement
-                who loves Lego
-              .rotator__statement
-                and a scuba diver
-              .rotator__statement
-                with a passion to build things
-              .rotator__statement
-                who knows details matter
-              .rotator__statement
-                who enjoys learning
-              .rotator__statement
-                who travelled around the world
-              .rotator__statement
-                who likes making things better
-              .rotator__statement
-                with previous startup experience
-            %h3 currently living in Montréal.
+          .medium-10.large-centered.columns
+            .row
+              .medium-12.columns
+                .greeting__text
+                  %h1 #{@greeting.capitalize}!
+                  %h2 I'm Pierre-Yves Poujade,
+                  %h3 Ruby on Rails developer and
+                .greeting__rotator
+                  .rotator__statement
+                    Lego fan
+                  .rotator__statement
+                    scuba diver
+                  .rotator__statement
+                    passionate things builder
+                  .rotator__statement
+                    detail oriented
+                  .rotator__statement
+                    fast learner
+                  .rotator__statement
+                    world traveller
+                  .rotator__statement
+                    intrepid optimizer
+                  .rotator__statement
+                    startup experienced
 
       #intro__links
         .row
           .medium-3.columns
             %a{href: 'https://github.com/coaxial'}
-              %i.fa.fa-fw.fa-github
-              See my Github
+              %i.fa.fa-5x.fa-github
           .medium-3.columns
             %a{href: 'https://www.linkedin.com/in/pypouj'}
-              %i.fa.fa-fw.fa-linkedin
-              Linked In
+              %i.fa.fa-5x.fa-linkedin
           .medium-3.columns
             %a{href: '#about'}
-              %i.fa.fa-fw.fa-question
-              About me
+              %i.fa.fa-5x.fa-question
           .medium-3.columns
             %a{href: '#contact'}
-              %i.fa.fa-fw.fa-envelope
-              Contact me
+              %i.fa.fa-5x.fa-envelope
     #about
       .row
         .medium-12.columns
