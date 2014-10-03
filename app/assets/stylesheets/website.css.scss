@@ -8,6 +8,15 @@
 // Subtracting 1px to make up for rounding errors and have 37px height
 $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
 
+.greeting__text {
+  h1 {
+    line-height: 3;
+  }
+  h2 {
+    line-height: 2;
+  }
+}
+
 .greeting__rotator {
   // Emulating a H3's footprint
   margin: {
@@ -28,12 +37,6 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
   }
 }
 
-// Realign the icons with their text
-#intro__links a i {
-  position: relative;
-  top: -1px;
-}
-
 @keyframes rotator {
   0%,    9%    { margin-top: ( 0 * $rotator-box-height); }
   12.5%, 21.5% { margin-top: (-1 * $rotator-box-height); }
@@ -43,4 +46,22 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
   62.5%, 71.5% { margin-top: (-5 * $rotator-box-height); }
   75%,   84%   { margin-top: (-6 * $rotator-box-height); }
   87.5%, 96.5% { margin-top: (-7 * $rotator-box-height); }
+}
+
+// Realign the icons with their text
+#intro__links a i {
+  position: relative;
+  top: -1px;
+}
+
+#intro {
+  margin: {
+    top:    rem-calc(100);
+    bottom: rem-calc(100);
+  }
+
+}
+
+#intro__links {
+  margin-top: rem-calc(80);
 }
