@@ -17,7 +17,17 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
   }
 }
 
-.greeting__rotator {
+.text__and {
+  width: 2 * $h3-font-size;
+}
+
+.text__rotator {
+  position: relative;
+  top: -1 * $rotator-box-height - $header-bottom-margin;
+  left: 2 * $h3-font-size;
+}
+
+.rotator__rotator {
   // Emulating a H3's footprint
   margin: {
     top:    $header-top-margin;
