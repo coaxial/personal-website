@@ -28,6 +28,12 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
   }
 }
 
+// Realign the icons with their text
+#intro__links a i {
+  position: relative;
+  top: -1px;
+}
+
 @keyframes rotator {
   0%,    9%    { margin-top: ( 0 * $rotator-box-height); }
   12.5%, 21.5% { margin-top: (-1 * $rotator-box-height); }
