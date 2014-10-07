@@ -8,6 +8,11 @@
 // Subtracting 1px to make up for rounding errors and have 37px height
 $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
 
+body {
+  background-image:  asset-url("background.png");
+  background-repeat: repeat;
+}
+
 .greeting__text {
   h1 {
     line-height: 3;
@@ -66,7 +71,6 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
 
 .section {
   margin-top: rem-calc(100);
-  }
   &:last-child {
     margin-bottom: rem-calc(100);
   }
@@ -74,4 +78,12 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
 
 #intro__links {
   text-align: center;
+}
+
+#about__bullets {
+  ul {
+    li {
+      font-size: 1.25rem;
+    }
+  }
 }
