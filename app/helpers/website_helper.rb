@@ -30,4 +30,11 @@ module WebsiteHelper
     return "good afternoon" if now >= afternoon.start && now < afternoon.end
     return "good evening" # evening is implicit. If it's not morning or afternoon then it must be evening.
   end
+
+  def age_in_secs year, month, day, hour, min
+    now = DateTime.now
+    birth_date = DateTime.new(year, month, day, hour, min)
+
+    ((now - birth_date) * 24 * 60 * 60).to_i
+  end
 end
