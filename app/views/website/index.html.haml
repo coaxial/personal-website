@@ -21,7 +21,7 @@
                       .rotator__statement
                         business administration graduate
                       .rotator__statement
-                        human after all
+                        %a{href: 'http://youtu.be/JIOCc0tfoqA'} human after all
                       .rotator__statement
                         up for a challenge
                       .rotator__statement
@@ -47,11 +47,11 @@
               %i.fa.fa-5x.fa-envelope
     #about
       .row
-        .medium-12.columns
-          %h2 Facts about me
-      #about__bullets
-        .row
-          .medium-12.columns
+        .medium-10.large-centered.columns
+          #about__title
+            %h2 Facts about me
+
+          #about__bullets
             %ul
               %li
                 Average monthly data usage: 444 GB
@@ -65,33 +65,31 @@
                 Last public Github commit: #{time_ago_in_words @last_github_commit_timestamp} ago
 
     #contact
-      #writeme
-        .row
-          .medium-12.columns
+      .row
+        .medium-10.large-centered.columns
+          #writeme
             %h2 Contact me
-        .row
-          .medium-12.columns
+
             =render '/shared/show_flashes'
-        .row
-          .medium-6.columns
+
             %form#writeme__form{method: 'post', action: writeme_path, accept: {charset: 'UTF-8'}}
               .row
                 .medium-12.columns
                   %label
                     Your name
-                    %input#writeme__senderName{type: 'text', name: 'writeme[sender_name]'}
+                    %input#writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne'}
 
               .row
                 .medium-12.columns
                   %label
                     Your email
-                    %input#writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]'}
+                    %input#writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]', placeholder: 'bwayne@wayneenterprises.com'}
 
               .row
                 .medium-12.columns
                   %label
                     Your message
-                  %textarea#writeme__senderMessage{type: 'text', name: 'writeme[sender_message]'}
+                  %textarea#writeme__senderMessage{type: 'text', name: 'writeme[sender_message]', placeholder: 'Enter your message here', rows: 8}
 
               =hidden_field_tag :utf8, '✓'
               =hidden_field_tag :authenticity_token, form_authenticity_token
