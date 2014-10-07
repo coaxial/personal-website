@@ -37,4 +37,14 @@ module WebsiteHelper
 
     ((now - birth_date) * 24 * 60 * 60).to_i
   end
+
+  def last_github_commit_timestamp
+    response = Github.activity.events.performed 'coaxial'
+
+    response.each do |e|
+      if e.type == 'PushEvent'
+        return e.created_at
+      end
+    end
+  end
 end
