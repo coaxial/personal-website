@@ -64,15 +64,14 @@ $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
   top: -1px;
 }
 
-#intro {
-  margin: {
-    top:    rem-calc(100);
-    bottom: rem-calc(100);
+.section {
+  margin-top: rem-calc(100);
   }
-
+  &:last-child {
+    margin-bottom: rem-calc(100);
+  }
 }
 
 #intro__links {
-  margin-top: rem-calc(80);
   text-align: center;
 }
