@@ -3,6 +3,8 @@ class WebsiteController < ApplicationController
 
   def index
     @greeting = time_greeting
+    @age_in_secs = age_in_secs(1986, 07, 25, 0, 30)
+    @last_github_commit = '<pending>'
   end
 
   def writeme
