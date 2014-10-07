@@ -63,3 +63,6 @@ gem 'postmark-rails'
 
 # Add vendor prefixes to CSS
 gem 'autoprefixer-rails'
+
+# Consume RESTful services
+gem 'faraday'
