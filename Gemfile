@@ -64,5 +64,5 @@ gem 'postmark-rails'
 # Add vendor prefixes to CSS
 gem 'autoprefixer-rails'
 
-# Consume RESTful services
-gem 'faraday'
+# Consume Github's API
+gem 'github_api'
