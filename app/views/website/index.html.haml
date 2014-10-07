@@ -1,6 +1,6 @@
 .row
   .medium-7.large-centered.columns
-    #intro
+    #intro.section
       #intro__greeting
         .row
           .medium-10.large-centered.columns
@@ -31,7 +31,7 @@
                       .rotator__statement
                         startup experienced
 
-      #intro__links
+      #intro__links.section
         .row
           .medium-3.columns
             %a{href: 'https://github.com/coaxial'}
@@ -45,7 +45,7 @@
           .medium-3.columns
             %a{href: '#contact'}
               %i.fa.fa-5x.fa-envelope
-    #about
+    #about.section
       .row
         .medium-10.large-centered.columns
           #about__title
@@ -64,7 +64,7 @@
               %li
                 Last public Github commit: #{time_ago_in_words @last_github_commit_timestamp} ago
 
-    #contact
+    #contact.section
       .row
         .medium-10.large-centered.columns
           #writeme
