@@ -62,7 +62,7 @@
               %li
                 Time lived to date: #{number_with_delimiter(@age_in_secs)} seconds
               %li
-                Last public Github commit: #{@last_github_commit}
+                Last public Github commit: #{time_ago_in_words @last_github_commit_timestamp} ago
 
     #contact
       #writeme
