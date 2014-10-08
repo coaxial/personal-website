@@ -14,6 +14,7 @@ body {
 }
 
 .greeting__text {
+  text-align: center;
   h1 {
     line-height: 3;
   }
@@ -24,12 +25,6 @@ body {
 
 .text__and {
   width: 2 * $h3-font-size;
-}
-
-.text__rotator {
-  position: relative;
-  top: -1 * $rotator-box-height - $header-bottom-margin;
-  left: 2 * $h3-font-size;
 }
 
 .rotator__rotator {
