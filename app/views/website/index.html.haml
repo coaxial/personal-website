@@ -20,7 +20,7 @@
                       .rotator__statement
                         business administration graduate
                       .rotator__statement
-                        %a{href: 'http://youtu.be/JIOCc0tfoqA'} human after all
+                        %a{href: '#', data: {reveal: {id: 'daftpunk-modal'}}} human after all
                       .rotator__statement
                         up for a challenge
                       .rotator__statement
@@ -129,3 +129,7 @@
               .medium-12.columns
                 %button.button.expand.radius{type: 'submit', data: { disable_with: "#{loading_animation} Sending..." }}
                   Send
+
+
+#daftpunk-modal.reveal-modal{data: {reveal: true}}
+  =render '/shared/daftpunk_modal'
