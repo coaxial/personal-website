@@ -23,10 +23,6 @@ body {
   }
 }
 
-.text__and {
-  width: 2 * $h3-font-size;
-}
-
 .rotator__rotator {
   // Emulating a H3's footprint
   margin: {
@@ -81,4 +77,13 @@ body {
       font-size: 1.25rem;
     }
   }
+}
+
+[id*="__title"] {
+  text-align: center;
+  margin-bottom: rem-calc(40);
+}
+
+#about__bullets {
+  text-align: center;
 }
