@@ -10,7 +10,6 @@
                   %h1 #{@greeting.capitalize}!
                   %h2 I'm Pierre-Yves Poujade
                   %h3 Ruby on Rails developer
-                  -# .text__and
                   %h3 and
                   .text__rotator
                     .rotator__rotator
@@ -55,51 +54,78 @@
             %h2 Facts about me
 
           #about__bullets
-            %ul
-              %li
-                Average monthly data usage: 444 GB
-              %li
-                Lived in 7 countries on 4 continents
-              %li
-                Lifetime distance flown (approx): 120,000 km
-              %li
-                Time lived to date:
-                %span#age_in_secs #{number_with_delimiter @age_in_secs}
-                seconds
-              %li
-                Last public Github commit: #{time_ago_in_words @last_github_commit_timestamp} ago
+            %dl
+              .row
+                .medium-6.columns
+                  %dt 444 GB
+                  %dd Average monthly data consumption
+
+                .medium-6.columns
+                  %dt #{time_ago_in_words @last_github_commit_timestamp} ago
+                  %dd Last public Github commit
+
+              .row
+                .medium-6.columns
+                  %dt 4
+                  %dd Number of continents lived on
+                .medium-6.columns
+                  %dt 7
+                  %dd Number of countries lived in
+
+              .row
+                .medium-6.columns
+                  %dt
+                    %span#age_in_secs #{number_with_delimiter @age_in_secs}
+                    seconds
+                  %dd Time lived to date
+
+                .medium-6.columns
+                  %dt 120,000 km
+                  %dd Lifetime distance flown (approx.)
 
     #contact.section
       .row
-        .medium-10.large-centered.columns
+        .medium-12.large-centered.columns
           #writeme
-            %h2 Contact me
+            #writeme__title
+              %h2 Write me
 
+      .row
+        .medium-8.large-centered.columns
+          #writeme__flash
             =render '/shared/show_flashes'
 
-            %form#writeme__form{method: 'post', action: writeme_path, accept: {charset: 'UTF-8'}}
-              .row
-                .medium-12.columns
-                  %label
-                    Your name
-                    %input#writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne'}
+      .row
+        .medium-8.large-centered.columns
+          %form#writeme__form{method: 'post', action: writeme_path, accept: {charset: 'UTF-8'}, data: {abide: true}}
+            .row
+              .medium-12.columns
+                %label
+                  Your name
+                  %input#writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne', required: true, pattern: '[[:alpha:][-][\s][\.]]+'}
+                %small.error
+                  Woops, care to double check that everything looks right?
 
-              .row
-                .medium-12.columns
-                  %label
-                    Your email
-                    %input#writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]', placeholder: 'bwayne@wayneenterprises.com'}
+            .row
+              .medium-12.columns
+                %label
+                  Your email
+                  %input#writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]', placeholder: 'bwayne@wayneenterprises.com', required: true, pattern: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'}
+                %small.error
+                  Hmm, that address seems invalid.
 
-              .row
-                .medium-12.columns
-                  %label
-                    Your message
-                  %textarea#writeme__senderMessage{type: 'text', name: 'writeme[sender_message]', placeholder: 'Enter your message here', rows: 8}
+            .row
+              .medium-12.columns
+                %label
+                  Your message
+                  %textarea#writeme__senderMessage{type: 'text', name: 'writeme[sender_message]', placeholder: 'Enter your message here', rows: 8, required: true, pattern: '.{2,}'}
+                %small.error
+                  Surely you meant to write something there.
 
-              =hidden_field_tag :utf8, '✓'
-              =hidden_field_tag :authenticity_token, form_authenticity_token
+            =hidden_field_tag :utf8, '✓'
+            =hidden_field_tag :authenticity_token, form_authenticity_token
 
-              .row
-                .medium-12.columns
-                  %button.button.expand.radius{type: 'submit', data: { disable_with: "#{loading_animation} Sending..." }}
-                    Send
+            .row
+              .medium-12.columns
+                %button.button.expand.radius{type: 'submit', data: { disable_with: "#{loading_animation} Sending..." }}
+                  Send
