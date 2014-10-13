@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// Importing Foundation
+@import "foundation_and_overrides";
+
 // Importing Foundation's variables
 @import "foundation/components/type";
 
@@ -9,18 +12,17 @@
 $rotator-box-height: (($header-line-height * $h3-font-size) - rem-calc(1));
 
 body {
-  background-image:  asset-url("background.png");
+  // background-image: asset-url("stardust.png");
+  background-image: asset-url("broken_noise.png");
   background-repeat: repeat;
 }
 
 .greeting__text {
   text-align: center;
-  h1 {
-    line-height: 3;
-  }
-  h2 {
-    line-height: 2;
-  }
+}
+
+.text__desc {
+  margin-top: rem-calc(50);
 }
 
 .rotator__rotator {
@@ -38,6 +40,7 @@ body {
   height:      $rotator-box-height;
   line-height: $header-line-height;
   font-size:   $h3-font-size;
+  color:       $header-font-color;
   &:first-child {
     animation: rotator 19s ease infinite;
   }
@@ -54,38 +57,51 @@ body {
   87.5%, 96.5% { margin-top: (-7 * $rotator-box-height); }
 }
 
-// Realign the icons with their text
-#intro__links a i {
-  position: relative;
-  top: -1px;
-}
-
 .section {
-  margin-top: rem-calc(100);
+  &:first-child {
+    margin-top: rem-calc(50);
+  }
+  margin-top: rem-calc(200);
   &:last-child {
     margin-bottom: rem-calc(100);
   }
 }
 
-#intro__links {
+.intro__links {
+  margin-top: rem-calc(100);
   text-align: center;
 }
 
-#about__bullets {
-  ul {
-    li {
-      font-size: 1.25rem;
-    }
+[class$="__title"] {
+  h1,
+  h2 {
+    color: $retro-boy;
+    text-align: center;
+    margin-bottom: rem-calc(40);
+    font-weight: bold;
   }
 }
 
-[id*="__title"] {
+.about__bullets {
   text-align: center;
-  margin-bottom: rem-calc(40);
 }
 
-#about__bullets {
-  text-align: center;
+.bullets__wrapper {
+  margin-bottom: rem-calc(45);
+  &:last-child {
+    margin-bottom: 0;
+  }
+  dd {
+    color: $forge;
+  }
+}
+.bullets__fact {
+  padding: rem-calc(10);
+  border-radius: $global-radius;
+  background-color: rgba($oil, 0.05);
+  dt h3 {
+    font-weight: 500;
+  }
 }
 
 #daftpunk-modal {

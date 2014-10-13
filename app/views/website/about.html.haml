@@ -1,0 +1,51 @@
+.row
+  .medium-7.large-centered.columns
+    .about.section
+      .row
+        .medium-10.large-centered.columns
+          .about__title
+            %h1 (Random) facts about me
+
+          .about__bullets
+            %dl
+              .bullets__wrapper
+                .row{data: {equalizer: true}}
+                  .medium-6.columns
+                    .bullets__fact{data: {equalizer: {watch: true}}}
+                      %dt
+                        %h3 444 GB
+                      %dd Average monthly data consumption
+
+                  .medium-6.columns
+                    .bullets__fact{data: {equalizer: {watch: true}}}
+                      %dt
+                        %h3 #{time_ago_in_words @last_github_commit_timestamp} ago
+                      %dd Last public Github commit
+
+              .bullets__wrapper
+                .row{data: {equalizer: true}}
+                  .medium-6.columns
+                    .bullets__fact{data: {equalizer: {watch: true}}}
+                      %dt
+                        %h3 4
+                      %dd Number of continents lived on
+                  .medium-6.columns
+                    .bullets__fact{data: {equalizer: {watch: true}}}
+                      %dt
+                        %h3 7
+                      %dd Number of countries lived in
+
+              .bullets__wrapper
+                .row{data: {equalizer: true}}
+                  .medium-6.columns
+                    .bullets__fact{data: {equalizer: {watch: true}}}
+                      %dt
+                        %h3
+                          %span#age_in_secs #{number_with_delimiter @age_in_secs}
+                      %dd Time lived to date (in seconds)
+
+                  .medium-6.columns
+                    .bullets__fact{data: {equalizer: {watch: true}}}
+                      %dt
+                        %h3 120,000 km
+                      %dd Lifetime distance flown (approx.)

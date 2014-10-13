@@ -3,8 +3,14 @@ class WebsiteController < ApplicationController
 
   def index
     @greeting = time_greeting
+  end
+
+  def about
     @age_in_secs = age_in_secs(1986, 07, 25, 0, 30)
     @last_github_commit_timestamp = last_github_commit_timestamp
+  end
+
+  def contact
   end
 
   def writeme

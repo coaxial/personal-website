@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'website/index'
+  get '/about' => 'website#about'
+  get '/contact' => 'website#contact'
   post '/writeme' => 'website#writeme'
   root 'website#index'
 
