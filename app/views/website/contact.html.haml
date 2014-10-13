@@ -1,48 +1,46 @@
-.row
-  .medium-7.large-centered.columns
-    .contact.section
-      .row
-        .medium-12.large-centered.columns
-          .writeme
-            .writeme__title
-              %h1 Write me
+.contact.section
+  .row
+    .medium-12.large-centered.columns
+      .writeme
+        .writeme__title
+          %h1 Write me
 
-      .row
-        .medium-8.large-centered.columns
-          .writeme__flash
-            =render '/shared/show_flashes'
+  .row
+    .medium-8.large-centered.columns
+      .writeme__flash
+        =render '/shared/show_flashes'
 
-      .row
-        .medium-8.large-centered.columns
-          %form.writeme__form{method: 'post', action: writeme_path, accept: {charset: 'UTF-8'}, data: {abide: true}}
-            .row
-              .medium-12.columns
-                %label
-                  Your name
-                  %input.writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne', required: true, pattern: '[a-zA-Z\u00c0-\u017e]+[-]?[\s]?[\.]?'}
-                %small.error
-                  Woops, care to double check that everything looks right?
+  .row
+    .medium-8.large-centered.columns
+      %form.writeme__form{method: 'post', action: writeme_path, accept: {charset: 'UTF-8'}, data: {abide: true}}
+        .row
+          .medium-12.columns
+            %label
+              Your name
+              %input.writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne', required: true, pattern: '[a-zA-Z\u00c0-\u017e]+[-]?[\s]?[\.]?'}
+            %small.error
+              Woops, care to double check that everything looks right?
 
-            .row
-              .medium-12.columns
-                %label
-                  Your email
-                  %input.writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]', placeholder: 'bwayne@wayneenterprises.com', required: true, pattern: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'}
-                %small.error
-                  Hmm, that address seems invalid.
+        .row
+          .medium-12.columns
+            %label
+              Your email
+              %input.writeme__senderAddr{type: 'email', name: 'writeme[sender_addr]', placeholder: 'bwayne@wayneenterprises.com', required: true, pattern: '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}'}
+            %small.error
+              Hmm, that address seems invalid.
 
-            .row
-              .medium-12.columns
-                %label
-                  Your message
-                  %textarea.writeme__senderMessage{type: 'text', name: 'writeme[sender_message]', placeholder: 'Enter your message here', rows: 8, required: true, pattern: '.{2,}'}
-                %small.error
-                  Surely you meant to write something there.
+        .row
+          .medium-12.columns
+            %label
+              Your message
+              %textarea.writeme__senderMessage{type: 'text', name: 'writeme[sender_message]', placeholder: 'Enter your message here', rows: 8, required: true, pattern: '.{2,}'}
+            %small.error
+              Surely you meant to write something there.
 
-            =hidden_field_tag :utf8, '✓'
-            =hidden_field_tag :authenticity_token, form_authenticity_token
+        =hidden_field_tag :utf8, '✓'
+        =hidden_field_tag :authenticity_token, form_authenticity_token
 
-            .row
-              .medium-12.columns
-                %button.button.expand.radius{type: 'submit', data: { disable_with: "#{loading_animation} Sending..." }}
-                  Send
+        .row
+          .medium-12.columns
+            %button.button.expand.radius{type: 'submit', data: { disable_with: "#{loading_animation} Sending..." }}
+              Send
