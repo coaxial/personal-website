@@ -1,14 +1,14 @@
 -if flash[:notice]
-  .alert-box.success.rounded
-    %p
-      =flash[:notice]
+  .alert-box.success.radius{data: {alert: true}}
+    =flash[:notice]
+    %a.close{href: "#"} &times;
 
 -if flash[:alert]
-  .alert-box.alert.rounded
-    %p
-      =flash[:alert]
+  .alert-box.alert.radius{data: {alert: true}}
+    =flash[:alert]
     -if flash[:errors]
       -flash[:errors].each do |error|
         %ul
           %li
             =error
+      %a.close{href: "#"} &times;
