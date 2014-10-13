@@ -19,7 +19,7 @@
               .medium-12.columns
                 %label
                   Your name
-                  %input.writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne', required: true, pattern: '[[:alpha:][-][\s][\.]]+'}
+                  %input.writeme__senderName{type: 'text', name: 'writeme[sender_name]', placeholder: 'Bruce Wayne', required: true, pattern: '[a-zA-Z\u00c0-\u017e]+[-]?[\s]?[\.]?'}
                 %small.error
                   Woops, care to double check that everything looks right?
 
