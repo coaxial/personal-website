@@ -1,54 +1,52 @@
-.row
-  .medium-7.large-centered.columns
-    .intro.section
-      .intro__greeting
+.intro.section
+  .intro__greeting
+    .row
+      .medium-10.large-centered.columns
         .row
-          .medium-10.large-centered.columns
-            .row
-              .medium-12.columns
-                .greeting__title
-                  %h1 #{@greeting.capitalize}!
-                .greeting__text
-                  .text__name
-                    %h2 I'm Pierre-Yves Poujade
-                  .text__desc
-                    %h3 Ruby on Rails developer
-                    %h3 and
-                  .text__rotator.green
-                    .rotator__rotator
-                      .rotator__statement
-                        Lego fan
-                      .rotator__statement
-                        scuba diver
-                      .rotator__statement
-                        business administration graduate
-                      .rotator__statement
-                        %a{href: '#', data: {reveal: {id: 'daftpunk-modal'}}} human after all
-                      .rotator__statement
-                        up for a challenge
-                      .rotator__statement
-                        world traveller
-                      .rotator__statement
-                        intrepid optimizer
-                      .rotator__statement
-                        startup experienced
+          .medium-12.columns
+            .greeting__title
+              %h1 #{@greeting.capitalize}!
+            .greeting__text
+              .text__name
+                %h2 I'm Pierre-Yves Poujade
+              .text__desc
+                %h3 Ruby on Rails developer
+                %h3 and
+              .text__rotator.green
+                .rotator__rotator
+                  .rotator__statement
+                    Lego fan
+                  .rotator__statement
+                    scuba diver
+                  .rotator__statement
+                    business administration graduate
+                  .rotator__statement
+                    %a{href: '#', data: {reveal: {id: 'daftpunk-modal'}}} human after all
+                  .rotator__statement
+                    up for a challenge
+                  .rotator__statement
+                    world traveller
+                  .rotator__statement
+                    intrepid optimizer
+                  .rotator__statement
+                    startup experienced
 
-      .intro__links
+  .intro__links
+    .row
+      .medium-10.large-centered.columns
         .row
-          .medium-10.large-centered.columns
-            .row
-              .medium-3.columns
-                %a{href: 'https://github.com/coaxial'}
-                  %i.fa.fa-5x.fa-github
-              .medium-3.columns
-                %a{href: 'https://www.linkedin.com/in/pypouj'}
-                  %i.fa.fa-5x.fa-linkedin
-              .medium-3.columns
-                %a{href: about_path}
-                  %i.fa.fa-5x.fa-question
-              .medium-3.columns
-                %a{href: contact_path}
-                  %i.fa.fa-5x.fa-envelope
+          .medium-3.columns
+            %a{href: 'https://github.com/coaxial'}
+              %i.fa.fa-5x.fa-github
+          .medium-3.columns
+            %a{href: 'https://www.linkedin.com/in/pypouj'}
+              %i.fa.fa-5x.fa-linkedin
+          .medium-3.columns
+            %a{href: about_path}
+              %i.fa.fa-5x.fa-question
+          .medium-3.columns
+            %a{href: contact_path}
+              %i.fa.fa-5x.fa-envelope
 
 #daftpunk-modal.reveal-modal{data: {reveal: true}}
-  =render '/shared/daftpunk_modal'
+=render '/shared/daftpunk_modal'
