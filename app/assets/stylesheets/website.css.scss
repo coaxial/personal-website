@@ -107,3 +107,8 @@ body {
 #daftpunk-modal {
   background-color: black;
 }
+
+// Abide errors class
+.error {
+  border-radius: 0 0 $alert-radius $alert-radius;
+}
