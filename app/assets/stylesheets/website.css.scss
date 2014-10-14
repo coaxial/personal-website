@@ -58,18 +58,18 @@ body {
 }
 
 .section {
-  &:first-child {
-    margin-top: rem-calc(50);
-  }
-  margin-top: rem-calc(200);
-  &:last-child {
-    margin-bottom: rem-calc(100);
-  }
+  margin-top: rem-calc(50);
 }
 
 .navlinks {
-  margin-top: rem-calc(100);
+  margin: {
+    top: rem-calc(100);
+    bottom: rem-calc(50);
+  }
   text-align: center;
+}
+.navlinks__row-wrapper:last-child {
+  margin-top: rem-calc(20);
 }
 
 [class$="__title"] {
