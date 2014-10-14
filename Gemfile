@@ -69,3 +69,6 @@ gem 'github_api'
 
 # For Heroku
 gem 'rails_12factor'
+
+# Code climate test coverage
+gem "codeclimate-test-reporter", group: :test, require: nil
