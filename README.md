@@ -1,5 +1,6 @@
 # Personal-website
 [![Code Climate](https://codeclimate.com/github/Coaxial/personal-website/badges/gpa.svg)](https://codeclimate.com/github/Coaxial/personal-website)
+[![Test Coverage](https://codeclimate.com/github/Coaxial/personal-website/badges/coverage.svg)](https://codeclimate.com/github/Coaxial/personal-website)
 
 This is my personal website. It is running Rails 4.1, Ruby 2.1.3 and Postgresql.
 ## Deployment
