@@ -66,3 +66,6 @@ gem 'autoprefixer-rails'
 
 # Consume Github's API
 gem 'github_api'
+
+# For Heroku
+gem 'rails_12factor'
