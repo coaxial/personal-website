@@ -76,3 +76,5 @@ gem 'rails_12factor'
 
 # Code climate test coverage
 gem "codeclimate-test-reporter", group: :test, require: nil
+
+gem 'rvm1-capistrano3', require: false
