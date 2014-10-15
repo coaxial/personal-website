@@ -1,5 +1,6 @@
 set :application, 'personal_website'
 set :repo_url, 'git@github.com:coaxial/personal-website.git'
+set :branch, 'cap'
 
 set :deploy_to, '/home/deploy/personal_website'
 
