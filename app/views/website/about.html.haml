@@ -17,7 +17,8 @@
               .medium-6.columns
                 .bullets__fact{data: {equalizer: {watch: true}}}
                   %dt
-                    %h3 #{time_ago_in_words @last_github_commit_timestamp} ago
+                    -cache({ expires_in: 3.hours }) do
+                      %h3 #{time_ago_in_words @last_github_commit_timestamp} ago
                   %dd Last public Github commit
 
           .bullets__wrapper
