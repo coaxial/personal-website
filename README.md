@@ -4,11 +4,16 @@
 
 This is my personal website. It is running Rails 4.1, Ruby 2.1.3 and Postgresql.
 ## Deployment
-If for some reason you'd like to prentend you're me and deploy my website on your server, here are the steps (assuming you have a working `ruby`, `bundle` and `postgres` setup)
+If for some reason you'd like to prentend you're me and deploy my website on your server, here are the steps.
+
+You'll need a working [Docker](https://docs.docker.com/installation/#installation) and [Fig](http://www.fig.sh/install.html), then:
 
 1. `git clone git@github.com:Coaxial/personal-website.git`
-2. `bundle install`
-3. `rake db:create`
+2. `cd personal-website`
+3. `fig build`
+4. `fig up`
+
+You can then access the app via `http://localhost:3000` or `http://<boot2docker ip>:3000`
 
 ## Licence
 Copyright (c) 2014 Coaxial
