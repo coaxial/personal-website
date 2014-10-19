@@ -13,7 +13,7 @@ You'll need a working [Docker](https://docs.docker.com/installation/#installatio
 3. `fig build`
 4. `fig up`
 
-You can then access the app via `http://localhost:3000` or `http://<boot2docker ip>:3000`
+You can then access the app via `http://localhost` or `http://<boot2docker ip>`
 
 ## Licence
 Copyright (c) 2014 Coaxial
