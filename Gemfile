@@ -72,3 +72,6 @@ gem 'rails_12factor'
 
 # Code climate test coverage
 gem "codeclimate-test-reporter", group: :test, require: nil
+
+# Use Puma instead of WEBrick
+gem 'puma'
