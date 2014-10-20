@@ -2,7 +2,7 @@ default: &default
   adapter: postgresql
   encoding: utf8
   host: <%= ENV['DB_HOSTNAME'] %>
-  username: <%= ENV['DOCKERIZED'].eql?('true') ? 'postgres' : 'root' %>
+  username: <%= ENV['DOCKERIZED'].eql?('true') ? 'postgres' : ENV['user'] %>
   pool: 5
   timeout: 5000
 
