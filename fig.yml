@@ -15,4 +15,4 @@ web:
   links:
     - app:pw-app
   volumes:
-    - ./lib/nginx/nginx.conf.example:/etc/nginx/nginx.conf:ro
+    - ./lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
