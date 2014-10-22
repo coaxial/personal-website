@@ -8,6 +8,14 @@ app:
   links:
     - db:pw-db
 
+webconf:
+  image: busybox
+  volumes:
+    - lib/nginx/ssl-certs/:/root/ssl-certs:ro
+    - lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  # command: echo "Data-only container for the webserver conf files."
+  command: true &> /dev/null
+
 web:
   image: nginx
   ports:
@@ -15,6 +23,14 @@ web:
     - "443:443"
   links:
     - app:pw-app
+  volumes_from:
+    - webconf
   volumes:
-    - lib/nginx/ssl-certs/:/root/ssl-certs:ro
-    - lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    - /var/log/nginx
+
+logs:
+  image: busybox
+  volumes_from:
+    - web
+  # command: echo "Data-only container for the logs."
+  command: true &> /dev/null
