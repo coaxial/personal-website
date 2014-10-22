@@ -3,7 +3,18 @@ db:
 
 app:
   build: .
-  ports:
-    - "80:3000"
+  expose:
+    - "3000"
   links:
     - db:pw-db
+
+web:
+  image: nginx
+  ports:
+    - "80:80"
+    - "443:443"
+  links:
+    - app:pw-app
+  volumes:
+    - lib/nginx/ssl-certs/:/root/ssl-certs:ro
+    - lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro

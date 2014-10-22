@@ -10,10 +10,15 @@ You'll need a working [Docker](https://docs.docker.com/installation/#installatio
 
 1. `git clone git@github.com:Coaxial/personal-website.git`
 2. `cd personal-website`
-3. `fig build`
-4. `fig up`
+3. _(optional)_ Copy your own `nginx.conf` file to `lib/nginx/nginx.conf`
+4. _(optional)_ Copy your SSL certificates/keys to `lib/nginx/ssl-certs/`
+5. _(optional)_ Copy your own `database.yml` to `config/databse.yml`
+6. _(optional)_ Copy your own `secrets.yml` to `config/secrets.yml`
+7. `fig build`
+8. `fig up`
+9. _(optional)_ Open ports 80 and 443 (if needed) in your firewall
 
-You can then access the app via `http://localhost` or `http://<boot2docker ip>`
+You can then access the app via `http(s)://localhost` or `http(s)://<boot2docker ip>`
 
 ## Licence
 Copyright (c) 2014 Coaxial
