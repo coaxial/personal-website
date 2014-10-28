@@ -14,7 +14,7 @@ module WebsiteHelper
   end
 
   def time_greeting
-    now = Time.now.in_time_zone('Eastern Time (US & Canada)')
+    now = Time.zone.now
     morning = TimePeriod.new({
       start: { h: 4,  m: 30 },
       end:   { h: 12, m: 29 }

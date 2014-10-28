@@ -21,5 +21,6 @@ module PersonalWebsite
     # config.i18n.default_locale = :de
     config.action_mailer.delivery_method = :postmark
     config.action_mailer.postmark_settings = { api_key: Rails.application.secrets.postmark_api_key }
+    config.time_zone = "Eastern Time (US & Canada)"
   end
 end
