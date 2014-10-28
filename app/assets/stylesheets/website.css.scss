@@ -112,3 +112,13 @@ body {
 .error {
   border-radius: 0 0 $alert-radius $alert-radius;
 }
+
+.oss-credits {
+  text-align: center;
+  font-size: $paragraph-font-size * 0.85;
+  color: $retro-boy;
+  a {
+    color: $retro-boy;
+    text-decoration: underline;
+  }
+}
