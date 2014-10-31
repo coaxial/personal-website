@@ -19,11 +19,11 @@ class WebsiteController < ApplicationController
     if @contact_form.valid?
       FormMailer.send_visitor_message(@contact_form).deliver
       flash[:notice] = "Message sent."
-      redirect_to action: :contact
+      redirect_to contact_path
     else
       flash[:alert]  = "Message not sent."
       flash[:errors] = @contact_form.errors.full_messages
-      redirect_to action: :index, params: params
+      redirect_to contact_path(params: params)
     end
   end
 end
