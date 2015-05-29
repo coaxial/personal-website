@@ -8,26 +8,29 @@ If for some reason you'd like to prentend you're me and deploy my website on you
 
 You'll need a working [Docker](https://docs.docker.com/installation/#installation) and [Fig](http://www.fig.sh/install.html), then:
 
-1. `git clone git@github.com:Coaxial/personal-website.git`
-2. `cd personal-website`
+* `git clone git@github.com:Coaxial/personal-website.git`
+* `cd personal-website`
 
 With SSL on the server:
 
-3. `cp lib/nginx/nginx.conf.ssl.example lib/nginx/nginx.conf`
-4. Copy your SSL certificates/keys to `lib/nginx/ssl-certs/`
+* `cp lib/nginx/nginx.conf.ssl.example lib/nginx/nginx.conf`
+* Copy your SSL certificates/keys to `lib/nginx/ssl-certs/`
 
 Without SSL on the server:
 
-5. `cp lib/nginx/nginx.conf.example lib/nginx/nginx.conf`
-6. If you have a custom `database.yml`, place it in `config/databse.yml`. Otherwise, `config/database.yml.example`
-will be used at build time.
-7. If you have  custom `secrets.yml`, plce it in `config/secrets.yml`. Otherwise `config/secrets.yml.example` will be
-used at build time.
-8. `fig build`
-9. `fig up`
-10. Open ports 80 and 443 (if needed) in your firewall
+* `cp lib/nginx/nginx.conf.example lib/nginx/nginx.conf`
 
-You can then access the app via `http(s)://localhost` or `http(s)://<boot2docker ip>`
+Then:
+
+* If you have a custom `database.yml`, place it in `config/databse.yml`. Otherwise, `config/database.yml.example`
+will be used at build time.
+* If you have  custom `secrets.yml`, plce it in `config/secrets.yml`. Otherwise `config/secrets.yml.example` will be
+used at build time.
+* `fig build`
+* `fig up`
+* Open ports 80 and 443 (if needed) in your firewall
+
+You can then access the app via `http(s)://localhost`, `http(s)://<boot2docker ip>` or `http(s)://<fqdn>`
 
 ## Licence
 Copyright (c) 2014 Coaxial
