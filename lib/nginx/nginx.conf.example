@@ -30,22 +30,6 @@ http {
         listen  80;
         server_name py.poujade.org;
 
-        return  301 https://py.poujade.org$request_uri;
-        # ^ Redirects all to HTTPS
-    }
-
-    server {
-        listen 443 ssl;
-        server_name py.poujade.org;
-        keepalive_timeout 70;
-
-        ssl on;
-        # create the unified crt with these instructions: http://www.startssl.com/?app=42
-        ssl_certificate /root/ssl-certs/py_poujade_org-unified.crt;
-        ssl_certificate_key /root/ssl-certs/py_poujade_org.key;
-        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-
-
         location / {
             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
             proxy_set_header X-Forwarded_Proto https;
