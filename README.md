@@ -33,6 +33,8 @@ used at build time.
 You can then access the app via `http(s)://localhost`, `http(s)://<boot2docker ip>` or `http(s)://<fqdn>`
 
 ## Licence
+MIT
+
 Copyright (c) 2014 Coaxial
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
