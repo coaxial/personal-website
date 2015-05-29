@@ -12,10 +12,12 @@ You'll need a working [Docker](https://docs.docker.com/installation/#installatio
 2. `cd personal-website`
 
 With SSL on the server:
+
 3. `cp lib/nginx/nginx.conf.ssl.example lib/nginx/nginx.conf`
 4. Copy your SSL certificates/keys to `lib/nginx/ssl-certs/`
 
 Without SSL on the server:
+
 5. `cp lib/nginx/nginx.conf.example lib/nginx/nginx.conf`
 6. If you have a custom `database.yml`, place it in `config/databse.yml`. Otherwise, `config/database.yml.example`
 will be used at build time.
