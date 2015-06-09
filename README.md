@@ -2,7 +2,7 @@
 [![Code Climate](https://codeclimate.com/github/Coaxial/personal-website/badges/gpa.svg)](https://codeclimate.com/github/Coaxial/personal-website)
 [![Test Coverage](https://codeclimate.com/github/Coaxial/personal-website/badges/coverage.svg)](https://codeclimate.com/github/Coaxial/personal-website)
 
-This is my personal website. It is running Rails 4.1, Ruby 2.1.3 and Postgresql.
+This is my personal website. It is running Rails 4.2 and is live at [https://py.poujade.org](https://py.poujade.org)
 ## Deployment
 If for some reason you'd like to prentend you're me and deploy my website on your server, here are the steps.
 
@@ -35,7 +35,7 @@ You can then access the app via `http(s)://localhost`, `http(s)://<boot2docker i
 ## Licence
 MIT
 
-Copyright (c) 2014 Coaxial
+Copyright (c) 2015 Coaxial
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
