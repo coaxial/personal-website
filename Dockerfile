@@ -16,4 +16,4 @@ RUN if [ -f "config/database.yml" ]; then\
       mv config/secrets.yml.example config/secrets.yml;\
     fi
 CMD rake db:create db:migrate assets:precompile &&\
-    rails s
+    rails s -b 0.0.0.0
