@@ -16,5 +16,5 @@ web:
   links:
     - app:pw-app
   volumes:
-    - lib/nginx/ssl-certs/:/root/ssl-certs:ro
-    - lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    - ./lib/nginx/ssl-certs/:/root/ssl-certs:ro
+    - ./lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
