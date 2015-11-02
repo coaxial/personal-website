@@ -26,8 +26,8 @@ Then:
 will be used at build time.
 * If you have  custom `secrets.yml`, plce it in `config/secrets.yml`. Otherwise `config/secrets.yml.example` will be
 used at build time.
-* `fig build`
-* `fig up`
+* `docker-compose build`
+* `docker-compose up`
 * Open ports 80 and 443 (if needed) in your firewall
 
 You can then access the app via `http(s)://localhost`, `http(s)://<boot2docker ip>` or `http(s)://<fqdn>`
