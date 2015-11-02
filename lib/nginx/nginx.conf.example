@@ -39,7 +39,7 @@ http {
             expires -1;
         }
 
-        location ~* /assets/ {
+        location ~* ^/assets {
             expires 1M;
             add_header Cache-Control "public";
         }
