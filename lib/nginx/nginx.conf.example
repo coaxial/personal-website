@@ -39,11 +39,6 @@ http {
             expires -1;
         }
 
-        location ~* ^/assets {
-            expires 1M;
-            add_header Cache-Control "public";
-        }
-
         location /home {
             return      301 /;
         }
