@@ -1,5 +1,6 @@
 db:
   image: postgres
+  restart: always
 
 app:
   build: .
@@ -7,6 +8,7 @@ app:
     - "3000"
   links:
     - db:pw-db
+  restart: always
 
 web:
   image: nginx
@@ -18,3 +20,4 @@ web:
   volumes:
     - ./lib/nginx/ssl-certs/:/root/ssl-certs:ro
     - ./lib/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+  restart: always
