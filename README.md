@@ -22,15 +22,26 @@ Without SSL on the server:
 
 Then:
 
-* If you have a custom `database.yml`, place it in `config/databse.yml`. Otherwise, `config/database.yml.example`
+* If you have a custom `database.yml`, place it in `config/database.yml`. Otherwise, `config/database.yml.example`
 will be used at build time.
-* If you have  custom `secrets.yml`, plce it in `config/secrets.yml`. Otherwise `config/secrets.yml.example` will be
 used at build time.
+
+Using Docker:
+
+* Copy the sample `.env`: `cp .env.example .env` and edit the values for the secret key base and Postmark's API key.
+* `docker-compose pull` to get the latest images
 * `docker-compose build`
 * `docker-compose up`
 * Open ports 80 and 443 (if needed) in your firewall
 
 You can then access the app via `http(s)://localhost`, `http(s)://<boot2docker ip>` or `http(s)://<fqdn>`
+
+Using Heroku:
+
+* Configure the `POSTMARK_API_KEY` and `SECRET_KEY_BASE` env vars on Heroku
+* Add the Heroku remote as per the instructions on Heroku's website
+* Push to Heroku
+* Visit the app with `heroku open`
 
 ## Licence
 MIT

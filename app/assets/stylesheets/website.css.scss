@@ -122,3 +122,7 @@ body {
     text-decoration: underline;
   }
 }
+
+.github-code {
+  @extend .oss-credits;
+}

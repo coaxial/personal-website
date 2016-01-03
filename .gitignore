@@ -18,8 +18,8 @@
 # Ignore the database config file
 /config/database.yml
 
-# Ignore the secrets file
-/config/secrets.yml
-
 # Ignore nginx live conf file
 /lib/nginx/nginx.conf
+
+# Ignore env vars
+.env
