@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.2.1
+  - 2.2.2
+before_script:
+  - cp config/database.yml.example config/database.yml
+  - psql -c 'create database "personal-website_test";' -U postgres
+env:
+  - DB_HOSTNAME=localhost
+addons:
+  postgresql: "9.3"
+
+services:
+  - postgresql
