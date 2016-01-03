@@ -20,3 +20,6 @@
 
 # Ignore nginx live conf file
 /lib/nginx/nginx.conf
+
+# Ignore env vars
+.env

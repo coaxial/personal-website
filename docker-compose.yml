@@ -4,6 +4,7 @@ db:
 
 app:
   build: .
+  env_file: .env
   expose:
     - "3000"
   links:
