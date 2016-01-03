@@ -25,7 +25,6 @@ Then:
 
 * If you have a custom `database.yml`, place it in `config/database.yml`. Otherwise, `config/database.yml.example`
 will be used at build time.
-used at build time.
 
 Using Docker:
 
