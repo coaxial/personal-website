@@ -1,6 +1,7 @@
 # Personal-website
 [![Code Climate](https://codeclimate.com/github/Coaxial/personal-website/badges/gpa.svg)](https://codeclimate.com/github/Coaxial/personal-website)
 [![Test Coverage](https://codeclimate.com/github/Coaxial/personal-website/badges/coverage.svg)](https://codeclimate.com/github/Coaxial/personal-website)
+[![Build Status](https://travis-ci.org/Coaxial/personal-website.svg?branch=master)](https://travis-ci.org/Coaxial/personal-website)
 
 This is my personal website. It is running Rails 4.2 and is live at [https://py.poujade.org](https://py.poujade.org)
 ## Deployment
