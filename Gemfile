@@ -76,3 +76,6 @@ gem 'timecop'
 
 # Use Puma instead of WEBrick
 gem 'puma'
+
+# Monitor errors
+gem 'sentry-raven'
