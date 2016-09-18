@@ -9,7 +9,7 @@ If for some reason you'd like to prentend you're me and deploy my website on you
 
 You'll need a working [Docker](https://docs.docker.com/installation/#installation) and [Fig](http://www.fig.sh/install.html), then:
 
-* `git clone git@github.com:Coaxial/personal-website.git`
+* `git clone https://github.com/Coaxial/personal-website.git`
 * `cd personal-website`
 
 With SSL on the server:
