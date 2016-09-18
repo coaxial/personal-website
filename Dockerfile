@@ -1,4 +1,4 @@
-FROM ruby:2.2-onbuild
+FROM ruby:2.3-onbuild
 MAINTAINER Pierre-Yves Poujade <py@poujade.org>
 ENV DB_HOSTNAME pw-db
 ENV DOCKERIZED true
